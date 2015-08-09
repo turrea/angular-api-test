@@ -7,7 +7,7 @@
   	.factory('Articles', Articles);
 
   function Articles($resource, ARTICLES_API_URL) {
-	  var articlesResource = $resource(ARTICLES_API_URL);
+    var articlesResource = $resource(ARTICLES_API_URL);
     return articlesResource;
   }
   Articles.$inject = ['$resource', 'ARTICLES_API_URL'];
