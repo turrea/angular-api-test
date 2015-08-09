@@ -5,8 +5,7 @@
   
   angular
     .module('demoApp', ['articles', 'infinite-scroll'])
-    .controller('ArticlesController', ArticlesController)
-    
+    .controller('ArticlesController', ArticlesController);
 
     function ArticlesController(Articles) {
       var vm = this;
@@ -36,5 +35,5 @@
       }
     }
     ArticlesController.$inject = ['Articles']
-  
+
 })();
