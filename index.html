@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="demoApp">
+
+  <head>
+    <script data-require="angular.js@1.4.3" data-semver="1.4.3" src="https://code.angularjs.org/1.4.3/angular.js"></script>
+    <script data-require="angular-resource@1.4.3" data-semver="1.4.3" src="https://code.angularjs.org/1.4.3/angular-resource.js"></script>
+    <script data-require="ngInfiniteScroll@1.1.2" data-semver="1.1.2" src="https://rawgit.com/sroze/ngInfiniteScroll/master/build/ng-infinite-scroll.js"></script>
+    <link data-require="bootstrap-css@3.3.1" data-semver="3.3.1" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <script src="script.js"></script>
+    <script src="articles.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <section ng-controller="ArticlesController as ctrl">
+
+        <h1>Articles</h1>
+
+        <section infinite-scroll="ctrl.getArticles()">
+          <article ng-repeat="article in ctrl.articles">
+            <h3>{{article.title}}</h2>
+            <h4 class=text-muted>{{article.published}}</h3>
+          </article>
+        </section>
+
+        <div ng-show="loading">
+          Loading...
+        </div>
+
+      </section>
+
+    </div>
+  </body>
+
+</html>
