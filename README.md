@@ -1,10 +1,9 @@
-# sample_api_app
-sample angular app that utilizes an API
+# Angular API Test
 
-## Motivation
-I recently came across this programming problem as part of an applicant screening process.
+Programming test that involved accessing an API from an Angular app.
 
-## Problem Statement
+## Instructions
+
 >Use the feed at http://www.stellarbiotechnologies.com/media/press-releases/json to display a lazy load the list of headlines and their publish date. Both limit and offset are available as URL parameters.
 
 ## Solution
