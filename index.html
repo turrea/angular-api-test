@@ -12,18 +12,18 @@
 
   <body>
     <div class="container">
-      <section ng-controller="ArticlesController as ctrl">
+      <section ng-controller="ArticlesController as vm">
 
         <h1>Articles</h1>
 
-        <section infinite-scroll="ctrl.getArticles()">
-          <article ng-repeat="article in ctrl.articles">
-            <h3>{{article.title}}</h3>
-            <h4 class=text-muted>{{article.published}}</h4>
+        <section infinite-scroll="vm.getArticles()">
+          <article ng-repeat="article in vm.articles">
+            <h3 ng-bind="article.title"></h3>
+            <h4 class=text-muted ng-bind="article.published"></h4>
           </article>
         </section>
 
-        <p ng-show="ctrl.loading">
+        <p ng-show="vm.loading">
           Loading...
         </p>
 
